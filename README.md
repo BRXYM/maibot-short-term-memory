@@ -1,5 +1,11 @@
 # 短期记忆插件
 
+## 本地修改说明（2026-11-24）
+
+在 `_manifest.json` 中将 SDK 上限由 `2.19.99` 调至 `2.21.99`。这次调整只涉及兼容声明。原本地验证记录在 `LOCAL-COMPATIBILITY.txt`：Python 3.13、SDK 2.21.0 环境通过上游 5 项测试，覆盖存取、持久化和上下文注入。
+
+对应功能提交 `ca00742`。[本地修改分支 local-maibot](https://github.com/BRXYM/maibot-short-term-memory/tree/local-maibot)
+
 [![MaiBot](https://img.shields.io/badge/MaiBot-1.3.x-blue)](https://github.com/Mai-with-u/MaiBot)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
