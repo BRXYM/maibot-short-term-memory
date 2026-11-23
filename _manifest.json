@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "id": "github.tantan-yyds.short-term-memory",
-  "version": "1.0.4",
+  "version": "1.2.1",
   "name": "短期记忆",
-  "description": "全局短期记忆：在 Planner 与 Replyer 中注入 QQ 号、QQ 名和事情描述，并提供创建、修改、删除工具。",
+  "description": "全局短期记忆：注入使用规则与有效记忆，遗忘的记忆可按需检索并恢复。",
   "author": {
     "name": "TanTanMao",
     "url": "https://github.com/TanTan-yyds"
@@ -17,11 +17,11 @@
   },
   "host_application": {
     "min_version": "1.3.0",
-    "max_version": "1.3.99"
+    "max_version": "1.4.99"
   },
   "sdk": {
     "min_version": "2.16.0",
-    "max_version": "2.19.99"
+    "max_version": "2.23.99"
   },
   "dependencies": [],
   "plugin_type": "data",

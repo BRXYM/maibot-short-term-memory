@@ -5,7 +5,7 @@ from __future__ import annotations
 from maibot_sdk import PluginConfigBase
 from pydantic import Field
 
-PLUGIN_VERSION = "1.0.4"
+PLUGIN_VERSION = "1.2.1"
 PLUGIN_CONFIG_VERSION = "1.0.0"
 
 
@@ -47,8 +47,15 @@ class ShortTermMemorySectionConfig(PluginConfigBase):
         default=72,
         ge=0,
         le=8760,
-        description="短期记忆保留小时数；0 表示不自动过期",
-        json_schema_extra={"label": "保留小时数", "min": 0, "max": 8760},
+        description="短期记忆有效小时数；超过后标记为过期但仍保留，0 表示不自动过期",
+        json_schema_extra={"label": "有效小时数", "min": 0, "max": 8760},
+    )
+    expired_retention_hours: int = Field(
+        default=336,
+        ge=0,
+        le=8760,
+        description="记忆过期后额外保留的小时数，到期才真正删除；默认 336 小时（14 天）",
+        json_schema_extra={"label": "过期后保留小时数", "min": 0, "max": 8760},
     )
     cleanup_interval_minutes: int = Field(
         default=30,
